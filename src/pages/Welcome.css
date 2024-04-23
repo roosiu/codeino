@@ -1,8 +1,13 @@
-.page {
-  --ion-background-color: var(--ion-color-tertiary);
-}
 .title {
   font-family: "Kodchasan";
   font-size: 30px;
   color: var(--ion-color-primary);
+}
+
+.logo {
+  padding: 20px 50px;
+}
+
+.text {
+  text-align: justify;
 }

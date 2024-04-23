@@ -2,3 +2,31 @@
   font-weight: bold;
   font-family: "Jost";
 }
+
+.container {
+  padding: 0 20px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ion-tab-bar {
+  padding: 10px 0;
+}
+ion-tab-button {
+  font-size: 15px;
+}
+
+ion-icon {
+  font-size: 30px;
+}
+
+.page {
+  --ion-background-color: var(--ion-color-tertiary);
+}
+.button-big {
+  /* font-size: 20px; */
+  letter-spacing: 3px;
+}
