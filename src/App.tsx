@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -40,16 +40,19 @@ import '@ionic/react/css/display.css';
 
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
-
+// import '@ionic/react/css/palettes/dark.system.css';
+import './App.css'
 /* Theme variables */
 import './theme/variables.css';
+import Header from './components/Header/Header';
 
 setupIonicReact();
+
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+  <Header/>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
@@ -65,18 +68,22 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar  slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonIcon aria-hidden="true"  src="/src/assets/icons/learn_icon.svg"/>
+            <IonLabel className='label'>LEARN</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab1" href="/tab1">
+            <IonIcon aria-hidden="true"  src="/src/assets/icons/course_icon.svg"/>
+            <IonLabel  className='label'>COURSE</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonIcon aria-hidden="true"  src="/src/assets/icons/roadmap_icon.svg"/>
+            <IonLabel  className='label'>ROADMAP</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonIcon aria-hidden="true"  src="/src/assets/icons/profile_icon.svg"/>
+            <IonLabel  className='label'>PROFILE</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
