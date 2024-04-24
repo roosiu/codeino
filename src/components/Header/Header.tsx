@@ -26,7 +26,7 @@ const Header = () => {
           <IonAvatar>
             <img
               alt="Silhouette of a person's head"
-              src="/src/assets/icons/point_icon.svg"
+              src="/assets/icons/point_icon.svg"
             />
           </IonAvatar>
           <IonLabel>324</IonLabel>
@@ -36,7 +36,7 @@ const Header = () => {
           <IonAvatar>
             <img
               alt="Silhouette of a person's head"
-              src="/src/assets/icons/energy_icon.svg"
+              src="/assets/icons/energy_icon.svg"
             />
           </IonAvatar>
         </IonChip>

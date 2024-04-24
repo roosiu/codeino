@@ -14,11 +14,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonContent className="page" fullscreen>
         <div className="container flex-center-column">
-          <IonImg
-            className="logo"
-            src="/src/assets/images/logo.svg"
-            alt="logo"
-          />
+          <IonImg className="logo" src="/assets/images/logo.svg" alt="logo" />
           <div className="title">Learn the code!</div>
           <div className="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus

@@ -79,31 +79,19 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="learn" href="/learn">
-            <IonIcon
-              aria-hidden="true"
-              src="/src/assets/icons/learn_icon.svg"
-            />
+            <IonIcon aria-hidden="true" src="/assets/icons/learn_icon.svg" />
             <IonLabel className="label">LEARN</IonLabel>
           </IonTabButton>
           <IonTabButton tab="course" href="/course">
-            <IonIcon
-              aria-hidden="true"
-              src="/src/assets/icons/course_icon.svg"
-            />
+            <IonIcon aria-hidden="true" src="/assets/icons/course_icon.svg" />
             <IonLabel className="label">COURSE</IonLabel>
           </IonTabButton>
           <IonTabButton tab="roadmap" href="/roadmap">
-            <IonIcon
-              aria-hidden="true"
-              src="/src/assets/icons/roadmap_icon.svg"
-            />
+            <IonIcon aria-hidden="true" src="/assets/icons/roadmap_icon.svg" />
             <IonLabel className="label">ROADMAP</IonLabel>
           </IonTabButton>
           <IonTabButton tab="profile" href="/profile">
-            <IonIcon
-              aria-hidden="true"
-              src="/src/assets/icons/profile_icon.svg"
-            />
+            <IonIcon aria-hidden="true" src="/assets/icons/profile_icon.svg" />
             <IonLabel className="label">PROFILE</IonLabel>
           </IonTabButton>
         </IonTabBar>
