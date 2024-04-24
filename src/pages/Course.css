@@ -1,0 +1,5 @@
+.course-card-title {
+  color: var("--ion-color-primary");
+  font-size: 20px;
+  font-weight: bold;
+}
