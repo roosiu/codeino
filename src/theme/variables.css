@@ -23,6 +23,17 @@ http://ionicframework.com/docs/theming/ */
   src: url("../assets/fonts/Kodchasan-Bold.ttf");
 }
 
+@font-face {
+  font-family: "Courier Prime";
+  font-style: normal;
+  src: url("../assets/fonts/CourierPrime-Regular.ttf");
+}
+@font-face {
+  font-family: "Courier Prime";
+  font-style: italic;
+  src: url("../assets/fonts/CourierPrime-Italic.ttf");
+}
+
 * {
   --ion-font-family: "Jost";
 }

@@ -17,11 +17,13 @@
 }
 
 .code-container {
-  justify-content: start;
+  text-align: start;
   background-color: var(--ion-color-light);
-  min-height: 80px;
+  padding: 5px;
 }
-
+.code-font {
+  font-family: "Courier Prime";
+}
 .info-span {
   color: var(--ion-color-primary);
   font-weight: bold;

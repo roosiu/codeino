@@ -9,12 +9,13 @@ import {
   IonProgressBar,
   IonSegment,
   IonSegmentButton,
+  IonTextarea,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 
 import "./Learn.css";
-import { informationCircleOutline, play } from "ionicons/icons";
+import { informationCircleOutline, play, refreshOutline } from "ionicons/icons";
 const Learn: React.FC = () => {
   return (
     <IonPage>
@@ -39,12 +40,37 @@ const Learn: React.FC = () => {
               </IonSegmentButton>
             </IonSegment>
           </IonToolbar>
-          <div className="code-container">ds</div>
-          <IonToolbar>
+          <IonTextarea
+            id="code-area"
+            className="code-container code-font"
+            labelPlacement="floating"
+            value="Lorem Ipsum"
+          ></IonTextarea>
+          <IonToolbar className="answers-toolbar">
             <IonButtons slot="start">
-              <IonButton>Button</IonButton>
+              <IonButton
+                color={"primary"}
+                fill="outline"
+                className="code-font ion-text-lowercase "
+              >{`<button>Click me!</button>`}</IonButton>
             </IonButtons>
-            <IonTitle>Default Buttons</IonTitle>
+          </IonToolbar>
+          <IonToolbar>
+            <IonButton slot="start" shape="round">
+              <IonIcon
+                slot="icon-only"
+                className="ion-padding"
+                icon={refreshOutline}
+              ></IonIcon>
+            </IonButton>
+
+            <IonButton slot="end" shape="round">
+              <IonIcon
+                slot="icon-only"
+                className="ion-padding"
+                icon={play}
+              ></IonIcon>
+            </IonButton>
           </IonToolbar>
         </div>
       </IonContent>
