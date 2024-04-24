@@ -12,7 +12,24 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.text {
+  text-align: left;
+}
 
+.code-container {
+  justify-content: start;
+  background-color: var(--ion-color-light);
+  min-height: 80px;
+}
+
+.info-span {
+  color: var(--ion-color-primary);
+  font-weight: bold;
+}
+
+.info-span ion-icon {
+  vertical-align: bottom;
+}
 .flex-center-column {
   display: flex;
   align-items: center;
