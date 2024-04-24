@@ -13,7 +13,7 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="page" fullscreen>
-        <div className="container">
+        <div className="container flex-center-column">
           <IonImg
             className="logo"
             src="/src/assets/images/logo.svg"

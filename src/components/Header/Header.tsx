@@ -41,14 +41,11 @@ const Header = () => {
           </IonAvatar>
         </IonChip>
       </IonToolbar>
+
       <IonToolbar>
-        <IonChip
-          style={{ width: "90vw", justifyContent: "center" }}
-          className="chip ion-margin-horizontal"
-          color={"primary"}
-        >
-          <IonLabel>Full-Stack Developer Junior</IonLabel>
-        </IonChip>
+        <IonTitle color={"primary"} style={{ textAlign: "center" }}>
+          Full-Stack Developer Junior
+        </IonTitle>
         <IonProgressBar value={progress}></IonProgressBar>
       </IonToolbar>
     </IonHeader>
