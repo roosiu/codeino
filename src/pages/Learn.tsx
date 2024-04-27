@@ -30,7 +30,7 @@ const Learn: React.FC = () => {
               Tap the snippets below
             </span>
           </div>
-          <IonToolbar>
+          <IonToolbar color={"tertiary"}>
             <IonSegment value="all">
               <IonSegmentButton value="all">
                 <IonLabel>index.html</IonLabel>
@@ -46,7 +46,7 @@ const Learn: React.FC = () => {
             labelPlacement="floating"
             value="Lorem Ipsum"
           ></IonTextarea>
-          <IonToolbar className="answers-toolbar">
+          <IonToolbar color={"tertiary"} className="answers-toolbar">
             <IonButtons slot="start">
               <IonButton
                 color={"primary"}
@@ -55,7 +55,7 @@ const Learn: React.FC = () => {
               >{`<button>Click me!</button>`}</IonButton>
             </IonButtons>
           </IonToolbar>
-          <IonToolbar>
+          <IonToolbar color={"tertiary"}>
             <IonButton slot="start" shape="round">
               <IonIcon
                 slot="icon-only"

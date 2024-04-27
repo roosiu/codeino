@@ -1,5 +1,10 @@
 import "./ProgressCircle.css";
-const ProgressCircle: React.FC = () => {
+interface ProgressCircleProps {
+  progress: number;
+}
+const ProgressCircle: React.FC<ProgressCircleProps> = (
+  props: ProgressCircleProps
+) => {
   return (
     <div className="circular-div">
       <svg
@@ -11,7 +16,7 @@ const ProgressCircle: React.FC = () => {
         <circle className="bg"></circle>
         <circle className="fg"></circle>
       </svg>
-      <span className="circular-progress__label">100%</span>
+      <span className="circular-progress__label"> {props.progress}%</span>
     </div>
   );
 };

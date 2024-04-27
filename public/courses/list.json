@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "HTML Basics",
+    "text": "Learn the basics of HTML",
+    "difficulty": "easy",
+    "roadmap": ["1"]
+  },
+  {
+    "id": 2,
+    "title": "CSS Basics",
+    "text": "Understand the basics of CSS",
+    "difficulty": "easy",
+    "roadmap": ["1"]
+  },
+  {
+    "id": 3,
+    "title": "JavaScript Basics",
+    "text": "Get started with JavaScript",
+    "difficulty": "easy",
+    "roadmap": ["2"]
+  },
+  {
+    "id": 4,
+    "title": "React Basics",
+    "text": "Learn the basics of React",
+    "difficulty": "medium",
+    "roadmap": ["3"]
+  },
+  {
+    "id": 5,
+    "title": "Node.js Basics",
+    "text": "Understand the basics of Node.js",
+    "difficulty": "medium",
+    "roadmap": ["3"]
+  },
+  {
+    "id": 6,
+    "title": "Advanced JavaScript",
+    "text": "Learn advanced JavaScript concepts",
+    "difficulty": "medium",
+    "roadmap": ["4"]
+  },
+  {
+    "id": 7,
+    "title": "React Native Basics",
+    "text": "Learn the basics of React Native",
+    "difficulty": "medium",
+    "roadmap": ["4"]
+  },
+  {
+    "id": 8,
+    "title": "TypeScript Basics",
+    "text": "Learn the basics of TypeScript",
+    "difficulty": "hard",
+    "roadmap": ["6"]
+  },
+  {
+    "id": 9,
+    "title": "GraphQL Basics",
+    "text": "Understand the basics of GraphQL",
+    "difficulty": "hard",
+    "roadmap": ["6"]
+  }
+]

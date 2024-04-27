@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to HTML",
+    "text": "HTML is the standard markup language used for creating web pages. With HTML, you can define the structure of a webpage, including headings, paragraphs, images, and links."
+  },
+  {
+    "id": 2,
+    "title": "HTML Tags",
+    "text": "HTML tags are used to define the structure and layout of a web page. Tags are represented by angle brackets and are written in all uppercase letters. The opening tag is used to define the start of a particular element, and the closing tag is used to define the end of that element."
+  },
+  {
+    "id": 3,
+    "title": "HTML Document Structure",
+    "text": "The basic structure of an HTML document includes a doctype declaration, the html element, and the head and body elements. The head element contains meta information about the document, such as the title and character encoding, while the body element contains the visible content of the web page."
+  },
+  {
+    "id": 4,
+    "title": "HTML Elements",
+    "text": "HTML elements are the building blocks of HTML documents. They define the structure and content of the web page. There are various types of HTML elements, including paragraphs, headings, images, links, lists, and tables, among others."
+  }
+]

@@ -8,14 +8,29 @@ import {
   IonItem,
   IonLabel,
   IonPage,
-  IonProgressBar,
   IonThumbnail,
 } from "@ionic/react";
 
 import "./Course.css";
 import ProgressCircle from "../components/ProgressCircle/ProgressCircle";
+import { useEffect, useState } from "react";
 
 const Course: React.FC = () => {
+  const [progress, setProgress] = useState(0); //TODO check how change state in other componnent
+  // Update the progress state
+  // This is a placeholder, the actual updating logic will depend on the requirements of your application
+  const updateProgress = () => {
+    setProgress((prevProgress) => prevProgress + 1);
+  };
+
+  // Call the updateProgress function every second
+  useEffect(() => {
+    if (progress === 100) {
+      return;
+    }
+    const interval = setInterval(updateProgress, 1000);
+    return () => clearInterval(interval);
+  }, [progress]);
   return (
     <IonPage>
       <IonContent className="page" fullscreen>
@@ -24,7 +39,7 @@ const Course: React.FC = () => {
             <IonCardHeader>
               <IonItem color="light">
                 <IonThumbnail slot="start">
-                  <ProgressCircle />
+                  <ProgressCircle progress={progress} />
                 </IonThumbnail>
                 <IonLabel>
                   <IonCardTitle className="course-card-title" color="primary">
