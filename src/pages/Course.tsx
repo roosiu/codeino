@@ -16,7 +16,7 @@ import ProgressCircle from "../components/ProgressCircle/ProgressCircle";
 import { useEffect, useState } from "react";
 
 const Course: React.FC = () => {
-  const [progress, setProgress] = useState(0); //TODO check how change state in other componnent
+  const [progress, setProgress] = useState(0);
   // Update the progress state
   // This is a placeholder, the actual updating logic will depend on the requirements of your application
   const updateProgress = () => {
@@ -25,10 +25,8 @@ const Course: React.FC = () => {
 
   // Call the updateProgress function every second
   useEffect(() => {
-    if (progress === 100) {
-      return;
-    }
-    const interval = setInterval(updateProgress, 1000);
+    if (progress === 100) return;
+    const interval = setInterval(updateProgress, 100);
     return () => clearInterval(interval);
   }, [progress]);
   return (

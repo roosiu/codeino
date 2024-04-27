@@ -4,6 +4,7 @@
   align-items: center;
 }
 .circular-progress {
+  --progress: 0;
   --size: 100%;
   --half-size: calc(var(--size) / 2);
   --stroke-width: 30px;
@@ -36,8 +37,8 @@
   transition: stroke-dasharray 0.3s linear 0s;
   stroke: var(--ion-color-primary);
 }
-@property --progress {
+/* @property --progress {
   syntax: "<number>";
   inherits: false;
   initial-value: 0;
-}
+} */

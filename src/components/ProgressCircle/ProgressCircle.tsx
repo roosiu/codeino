@@ -1,7 +1,9 @@
+import React from "react";
 import "./ProgressCircle.css";
 interface ProgressCircleProps {
   progress: number;
 }
+
 const ProgressCircle: React.FC<ProgressCircleProps> = (
   props: ProgressCircleProps
 ) => {
@@ -12,6 +14,11 @@ const ProgressCircle: React.FC<ProgressCircleProps> = (
         height="100%"
         viewBox="0 0 250 250"
         className="circular-progress"
+        style={
+          {
+            "--progress": props.progress,
+          } as React.CSSProperties
+        }
       >
         <circle className="bg"></circle>
         <circle className="fg"></circle>

@@ -49,55 +49,84 @@ import Learn from "./pages/Learn";
 import Course from "./pages/Course";
 import Profile from "./pages/Profile";
 import Roadmap from "./pages/Roadmap";
+import { addDoc, collection, getDocs } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import { db } from "./services/firestore";
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <Header />
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/welcome">
-            <Welcome />
-          </Route>
-          <Route exact path="/learn">
-            <Learn />
-          </Route>
-          <Route exact path="/course">
-            <Course />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/roadmap">
-            <Roadmap />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/welcome" />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="learn" href="/learn">
-            <IonIcon aria-hidden="true" src="/assets/icons/learn_icon.svg" />
-            <IonLabel className="label">LEARN</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="course" href="/course">
-            <IonIcon aria-hidden="true" src="/assets/icons/course_icon.svg" />
-            <IonLabel className="label">COURSE</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="roadmap" href="/roadmap">
-            <IonIcon aria-hidden="true" src="/assets/icons/roadmap_icon.svg" />
-            <IonLabel className="label">ROADMAP</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="profile" href="/profile">
-            <IonIcon aria-hidden="true" src="/assets/icons/profile_icon.svg" />
-            <IonLabel className="label">PROFILE</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  const [todos, setTodos] = useState<any[]>([]);
+
+  const fetchPost = async () => {
+    //TODO universal fetch function with error handling and parameters
+    await getDocs(collection(db, "courses")).then((querySnapshot) => {
+      const newData = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setTodos(newData);
+      console.log(todos, newData);
+    });
+  };
+
+  useEffect(() => {
+    fetchPost();
+  }, []);
+
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <Header />
+        <IonTabs>
+          <IonRouterOutlet>
+            <Route exact path="/welcome">
+              <Welcome />
+            </Route>
+            <Route exact path="/learn">
+              <Learn />
+            </Route>
+            <Route exact path="/course">
+              <Course />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/roadmap">
+              <Roadmap />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/welcome" />
+            </Route>
+          </IonRouterOutlet>
+          <IonTabBar slot="bottom">
+            <IonTabButton tab="learn" href="/learn">
+              <IonIcon aria-hidden="true" src="/assets/icons/learn_icon.svg" />
+              <IonLabel className="label">LEARN</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="course" href="/course">
+              <IonIcon aria-hidden="true" src="/assets/icons/course_icon.svg" />
+              <IonLabel className="label">COURSE</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="roadmap" href="/roadmap">
+              <IonIcon
+                aria-hidden="true"
+                src="/assets/icons/roadmap_icon.svg"
+              />
+              <IonLabel className="label">ROADMAP</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="profile" href="/profile">
+              <IonIcon
+                aria-hidden="true"
+                src="/assets/icons/profile_icon.svg"
+              />
+              <IonLabel className="label">PROFILE</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
