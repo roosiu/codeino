@@ -29,4 +29,5 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
-/src/services/firestore.ts
+
+src/services/firestore.ts

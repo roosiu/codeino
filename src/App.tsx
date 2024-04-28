@@ -49,31 +49,10 @@ import Learn from "./pages/Learn";
 import Course from "./pages/Course";
 import Profile from "./pages/Profile";
 import Roadmap from "./pages/Roadmap";
-import { addDoc, collection, getDocs } from "firebase/firestore";
-import { useState, useEffect } from "react";
-import { db } from "./services/firestore";
 
 setupIonicReact();
 
 const App: React.FC = () => {
-  const [todos, setTodos] = useState<any[]>([]);
-
-  const fetchPost = async () => {
-    //TODO universal fetch function with error handling and parameters in first
-    await getDocs(collection(db, "courses")).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setTodos(newData);
-      console.log(todos, newData);
-    });
-  };
-
-  useEffect(() => {
-    fetchPost();
-  }, []);
-
   return (
     <IonApp>
       <IonReactRouter>
