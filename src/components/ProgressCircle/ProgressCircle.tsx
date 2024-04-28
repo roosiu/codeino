@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProgressCircle.css";
 interface ProgressCircleProps {
-  progress: number;
+  progress: number; //TODO color props
 }
 
 const ProgressCircle: React.FC<ProgressCircleProps> = (

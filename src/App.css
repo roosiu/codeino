@@ -13,11 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%); */
 }
 .text {
   text-align: left;

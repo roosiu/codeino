@@ -59,7 +59,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<any[]>([]);
 
   const fetchPost = async () => {
-    //TODO universal fetch function with error handling and parameters
+    //TODO universal fetch function with error handling and parameters in first
     await getDocs(collection(db, "courses")).then((querySnapshot) => {
       const newData = querySnapshot.docs.map((doc) => ({
         ...doc.data(),

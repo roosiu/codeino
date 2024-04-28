@@ -31,6 +31,8 @@ const Course: React.FC = () => {
   }, [progress]);
   return (
     <IonPage>
+      {" "}
+      //
       <IonContent className="page" fullscreen>
         <div className="container">
           <IonCard color="light">
