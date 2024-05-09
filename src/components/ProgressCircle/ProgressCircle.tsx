@@ -1,11 +1,11 @@
 import React from "react";
 import "./ProgressCircle.css";
 interface ProgressCircleProps {
-  progress: number; //TODO color props
+  progress: number;
 }
 
 const ProgressCircle: React.FC<ProgressCircleProps> = (
-  props: ProgressCircleProps
+  props: ProgressCircleProps //TODO add color props
 ) => {
   return (
     <div className="circular-div">

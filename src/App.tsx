@@ -83,10 +83,6 @@ const App: React.FC = () => {
               <IonIcon aria-hidden="true" src="/assets/icons/learn_icon.svg" />
               <IonLabel className="label">LEARN</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="course" href="/course">
-              <IonIcon aria-hidden="true" src="/assets/icons/course_icon.svg" />
-              <IonLabel className="label">COURSE</IonLabel>
-            </IonTabButton>
             <IonTabButton tab="roadmap" href="/roadmap">
               <IonIcon
                 aria-hidden="true"
@@ -94,6 +90,11 @@ const App: React.FC = () => {
               />
               <IonLabel className="label">ROADMAP</IonLabel>
             </IonTabButton>
+            <IonTabButton tab="course" href="/course">
+              <IonIcon aria-hidden="true" src="/assets/icons/course_icon.svg" />
+              <IonLabel className="label">COURSE</IonLabel>
+            </IonTabButton>
+
             <IonTabButton tab="profile" href="/profile">
               <IonIcon
                 aria-hidden="true"

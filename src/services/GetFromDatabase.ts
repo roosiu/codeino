@@ -1,10 +1,10 @@
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../services/firestore";
 
-const GetFromDatabase = async (data: string) => {
+const GetFromDatabase = async (data: string): Promise<any[] | null> => {
   if (!data) return null;
 
-  let newData; // Declare newData outside of the callback function
+  let newData: any[] = []; // Declare newData outside of the callback function
 
   await getDocs(collection(db, data)).then((querySnapshot) => {
     newData = querySnapshot.docs.map((doc) => ({
