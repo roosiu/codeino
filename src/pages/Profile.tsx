@@ -1,5 +1,5 @@
 import {IonButton, IonContent, IonPage, useIonViewWillEnter} from "@ionic/react";
-import { setData, getData } from "../services/LocalStorage";
+import {setData, getData, getAllData} from "../services/LocalStorage";
 import "./Profile.css";
 import React, {useState} from "react";
 import profileProps from "../interfaces/profileProps";
@@ -8,8 +8,7 @@ const [profile, setProfile] = useState<profileProps>({
     activeCourse: "", activeSteps: 0, energy: 0, name: "", points: 0
 })
   useIonViewWillEnter(()=>{
-      getData("name").then((r) => setProfile({...profile, name: r.value})) //TODO get every data from local storage
-      getData("points").then((r) => setProfile({...profile, points: r.value || 0}))
+      getAllData().then((r) => setProfile(r))
 })
   return (
     <IonPage>

@@ -1,5 +1,6 @@
 import {Preferences} from "@capacitor/preferences";
-
+import profileProps from "../interfaces/profileProps";
+import profile from "../pages/Profile";
 /**
  * Sets the value of a data item in local storage.
  *
@@ -21,9 +22,19 @@ const getData = async (name: string): Promise<any> => {
   return await Preferences.get({key: name});
 };
 
+/**
+ *  Retrieves all data from local storage.
+ *  @return An object of all data.
+ */
 const getAllData = async () => {
-  //TODO get all data from local storage
-  let allData: string[] = ['name', 'id', 'points', 'energy'];
+  let allData: profileProps= {name: "", activeCourse: "", activeSteps: 0, energy: 0, points: 0};
+  for (const key of Object.keys(allData)) {
+    // const index = Object.keys(allData2).indexOf(key);
+    await getData(key).then((r) => {
+      allData = {...allData, [key]: r.value};
+    })
+  }
+ return allData
 };
 
 
