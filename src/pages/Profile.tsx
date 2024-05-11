@@ -9,7 +9,7 @@ const [profile, setProfile] = useState<profileProps>({
 })
   useIonViewWillEnter(()=>{
       getData("name").then((r) => setProfile({...profile, name: r.value})) //TODO get every data from local storage
-      getData("points").then((r) => setProfile({profile, points: r.value || 0}))
+      getData("points").then((r) => setProfile({...profile, points: r.value || 0}))
 })
   return (
     <IonPage>

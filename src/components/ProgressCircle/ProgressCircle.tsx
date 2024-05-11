@@ -5,7 +5,7 @@ interface ProgressCircleProps {
 }
 
 const ProgressCircle: React.FC<ProgressCircleProps> = (
-  props: ProgressCircleProps //TODO add color props
+  props: ProgressCircleProps
 ) => {
   return (
     <div className="circular-div">

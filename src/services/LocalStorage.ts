@@ -7,8 +7,8 @@ import {Preferences} from "@capacitor/preferences";
  * @param {string | any} value - The value to be stored.
  * @return {void} This function does not return anything.
  */
-const setData = (name: string, value: string | any) => {
-  Preferences.set({ key: name, value: value });
+const setData = (name: string, value: string | any): void => {
+  Preferences.set({key: name, value: value}).then(() => console.log('Data set'));
 };
 
 /**
@@ -21,9 +21,9 @@ const getData = async (name: string): Promise<any> => {
   return await Preferences.get({key: name});
 };
 
-
 const getAllData = async () => {
   //TODO get all data from local storage
+  let allData: string[] = ['name', 'id', 'points', 'energy'];
 };
 
 
