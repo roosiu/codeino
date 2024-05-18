@@ -1,6 +1,6 @@
 import {Preferences} from "@capacitor/preferences";
 import profileProps from "../interfaces/profileProps";
-import profile from "../pages/Profile";
+
 /**
  * Sets the value of a data item in local storage.
  *
