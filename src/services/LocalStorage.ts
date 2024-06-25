@@ -1,4 +1,4 @@
-import {Preferences} from "@capacitor/preferences";
+import { Preferences } from "@capacitor/preferences";
 import profileProps from "../interfaces/profileProps";
 
 /**
@@ -9,7 +9,7 @@ import profileProps from "../interfaces/profileProps";
  * @return {void} This function does not return anything.
  */
 const setData = (name: string, value: string | any): void => {
-  Preferences.set({key: name, value: value}).then(() => console.log('Data set'));
+    Preferences.set({key: name, value: value}).then(() => console.log('Data set'));
 };
 
 /**
@@ -19,7 +19,7 @@ const setData = (name: string, value: string | any): void => {
  * @return {Promise<any>} The retrieved value.
  */
 const getData = async (name: string): Promise<any> => {
-  return await Preferences.get({key: name});
+    return await Preferences.get({key: name});
 };
 
 /**
@@ -27,14 +27,14 @@ const getData = async (name: string): Promise<any> => {
  *  @return An object of all data.
  */
 const getAllData = async () => {
-  let allData: profileProps= {name: "", activeCourse: "", activeSteps: 0, energy: 0, points: 0};
-  for (const key of Object.keys(allData)) {
-    // const index = Object.keys(allData2).indexOf(key);
-    await getData(key).then((r) => {
-      allData = {...allData, [key]: r.value};
-    })
-  }
- return allData
+    let allData: profileProps = {name: "", activeCourse: "", activeSteps: 0, energy: 0, points: 0};
+    for (const key of Object.keys(allData)) {
+        // const index = Object.keys(allData2).indexOf(key);
+        await getData(key).then((r) => {
+            allData = {...allData, [key]: r.value};
+        })
+    }
+    return allData
 };
 
 
